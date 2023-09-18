@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Aplicativo exemplo de uso de EJB</h1>
+    <p>Obs.: tentar inserir com id=3 lançará uma exceção de "Menor de idade inválido". <br>
+        Inserir com id=4 fará com que o nome seja alterado, após a inserção, para "nome" + "alterado". <br>
+        Lembre-se que a cada reinício do servidor, os dados serão apagados.
+    </p>
+    <br>
+    <form action="usuario.do" method="GET">
+        Id: <input name="id"><br>
+        Nome: <input name="nome">
+        <input type="hidden" name="oper" value="1" />
+        <button>Inserir</button>
+    </form>
+    <br>
+    <form action="usuario.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button>Listar Usuários</button>
+    </form>
+
+    <br>
+    <form action="mensagem.do" method="GET">
+        Id: <input name="id"><br>
+        Mensagem: <input name="texto">
+        <input type="hidden" name="oper" value="1" />
+        <button>Inserir</button>
+    </form>
+    <br>
+    <form action="mensagem.do" method="GET">
+        Id: <input name="id">
+        <input type="hidden" name="oper" value="3" />
+        <button>Pesquisar</button>
+    </form>
+    <br>
+    <form action="mensagem.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button>Listar Mensagens</button>
+    </form>
+
+</body>
+</html>
